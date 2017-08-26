@@ -1,12 +1,18 @@
+.button {
+	text-align: center:
+	margin: auto;
+}
+
 .container {
 	line-height: 0;
+	text-align: center;
 }
 
 .gridSquare {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: blue;
+	width: 60px;
+	height: 60px;
+	background-color: pink;
 }
