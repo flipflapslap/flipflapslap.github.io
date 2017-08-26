@@ -1,14 +1,14 @@
-var numberOfSquares = 4;
+var numberOfSquares = 8;
 var area = numberOfSquares * numberOfSquares;
 
 $(document).ready(function(){
 	var gridSquare = $('.gridSquare');
 	var container = $('.container');
-	var gridSquareHeight = 100 / numberOfSquares;
-	var gridSquareWidth = 100 / numberOfSquares;
+	var gridSquareHeight = 500 / numberOfSquares;
+	var gridSquareWidth = 500 / numberOfSquares;
 	
-	gridSquare.height(gridSquareHeight + "%");
-	gridSquare.width(gridSquareWidth + "%");
+	gridSquare.height(gridSquareHeight);
+	gridSquare.width(gridSquareWidth);
 
 	for (var i = 1; i < area; i++){
 		if (i % numberOfSquares == 0){

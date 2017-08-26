@@ -1,9 +1,3 @@
-/*html, body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-}*/
-
 .header {
 	width: 100%;
 	height: 20px;
@@ -19,14 +13,11 @@
 	line-height: 0;
 	text-align: center;
 	margin: 0 auto;
-	border: 1px solid black;
 	width: 500px;
 	height: 500px;
 }
 
 .gridSquare {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
+	float: left;
 	background-color: pink;
 }
