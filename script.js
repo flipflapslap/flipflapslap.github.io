@@ -1,8 +1,17 @@
+var numberOfSquares = 4;
+var area = numberOfSquares * numberOfSquares;
+
 $(document).ready(function(){
 	var gridSquare = $('.gridSquare');
 	var container = $('.container');
-	for (var i = 1; i < 256; i++){
-		if (i % 16 == 0){
+	var gridSquareHeight = 100 / numberOfSquares;
+	var gridSquareWidth = 100 / numberOfSquares;
+	
+	gridSquare.height(gridSquareHeight + "%");
+	gridSquare.width(gridSquareWidth + "%");
+
+	for (var i = 1; i < area; i++){
+		if (i % numberOfSquares == 0){
 			(container).append("<br/>");
 			gridSquare.clone().appendTo(container);
 		} else {
@@ -20,5 +29,8 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$("#button").click(function(){
 		$(".gridSquare").css("background-color", "pink");
+		numberOfSquares = prompt("Enter number of Squares");
+		area = numberOfSquares * numberOfSquares;
 	});
 });
+
