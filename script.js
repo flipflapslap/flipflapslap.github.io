@@ -1,4 +1,4 @@
-var numberOfSquares = 8;
+var numberOfSquares = 5;
 var area = numberOfSquares * numberOfSquares;
 
 $(document).ready(function(){
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$('.gridSquare').hover(function(){
-		$(this).css("background-color", "black");
+		$(this).css("background-color", "#9d9dfb");
 	})
 });
 
