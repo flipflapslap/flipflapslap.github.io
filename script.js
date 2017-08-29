@@ -16,22 +16,17 @@ function initGrid(numberOfSquares){
 	for (var i = 1; i < area; i++){
 		gridSquare.clone().appendTo(container);
 	}
-		/*if (i % numberOfSquares == 0){
-			(container).append("<br/>");
-			gridSquare.clone().appendTo(container);
-		} else {
-			gridSquare.clone().appendTo(container);
-		}
-	}*/
 }
 
 function newGrid(){
 	$("#button").click(function(){
 		var input = prompt("Enter number of Squares");
 		$('.container').empty();
+		$('.container').append("<div class = gridSquare> </div>");		
 		initGrid(input);
+		hover();
 	});
-} 
+}
 
 function hover(){
 	$('.gridSquare').hover(function(){
