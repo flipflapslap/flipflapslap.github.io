@@ -1,7 +1,11 @@
+var timer = 0;
+
 $(document).ready(function(){
 	initGrid(3);
 	newGrid();
 	randomize();
+	dance();
+
 })
 
 function initGrid(numberOfSquares){
@@ -26,6 +30,10 @@ function newGrid(){
 		$('.container').append("<div class = gridSquare> </div>");		
 		initGrid(input);
 		hover();
+
+		if (timer != 0){
+			stopDance();
+		}
 	})
 }
 
@@ -34,6 +42,29 @@ function randomize(){
 		$('.gridSquare').hover(function(){ 
 			$(this).css("background-color", '#' + Math.floor(Math.random()*16777215).toString(16));
 		})
+	})
+}
+
+function startDance(){
+	timer = setInterval(function(){
+		$('.gridSquare').each(function(){
+			$(this).css("background-color", '#' + Math.floor(Math.random()*16777215).toString(16));
+			});
+	}, 150)
+}
+
+function stopDance(){
+	clearInterval(timer);
+	timer = 0;
+}
+
+function dance(){
+	$('#dance').click(function(){
+		if (timer == 0){
+			startDance();
+		} else {
+			stopDance();
+		} 
 	})
 }
 
